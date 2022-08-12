@@ -1,0 +1,54 @@
+<table mat-table [dataSource]="products" class="mat-elevation-z8">
+  
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> Id </th>
+      <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+    </ng-container>
+  
+    <!-- Price Column -->
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef> Preço </th>
+      <td mat-cell *matCellDef="let row"> {{row.price}} </td>
+    </ng-container>
+  
+    <!-- Entry Stock Date Column -->
+    <ng-container matColumnDef="entryStock">
+      <th mat-header-cell *matHeaderCellDef> Entrada em estoque </th>
+      <td mat-cell *matCellDef="let row"> {{row.entryStock}} </td>
+    </ng-container>
+
+    <!-- Actions Column -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Ações </th>
+      <td mat-cell *matCellDef="let row" class="actions"> 
+        <button matTooltip="Alterar produto"
+        aria-label="Button that displays a tooltip when focused or hovered over"
+        >
+          <a routerLink="/products/update/{{ row.id }}" class="edit">
+              <i class="material-icons">
+                  edit
+              </i>
+          </a>
+        </button>
+        <button matTooltip="Deletar produto"
+        aria-label="Button that displays a tooltip when focused or hovered over"
+        >
+          <a routerLink="/products/delete/{{ row.id }}" class="delete">
+            <i class="material-icons">
+                delete
+            </i>
+          </a>
+        </button>
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+  </table>

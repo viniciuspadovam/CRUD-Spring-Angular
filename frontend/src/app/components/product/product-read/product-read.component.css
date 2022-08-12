@@ -1,0 +1,21 @@
+table {
+    width: 100%;
+    margin-top: 50px;
+}
+table th,
+table tr {
+    text-align: center;
+}
+table td.actions {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+}
+table td.actions button {
+    background: transparent;
+    border: none;
+    height: 48px;
+}
+a i {
+    color: #7b1fa2;
+}

@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-title>Alterar Produto</mat-card-title>
+    <form autocomplete="off" [formGroup]="form">
+        <mat-form-field>
+            <input matInput type="text" placeholder="Id" formControlName="id" [(ngModel)]="product.id">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" color="primary" placeholder="Nome do produto" formControlName="name" [(ngModel)]="product.name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" placeholder="Preço (R$)" formControlName="price" pattern="[0-9]" [(ngModel)]="product.price">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" placeholder="Entrada em estoque" formControlName="entryStock" [(ngModel)]="product.entryStock">
+        </mat-form-field>
+    </form>
+    
+    <button mat-raised-button (click)="updateProduct()" color="primary">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">Cancelar</button>
+</mat-card>
