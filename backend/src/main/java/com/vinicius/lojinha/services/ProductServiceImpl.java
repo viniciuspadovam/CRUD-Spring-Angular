@@ -1,5 +1,6 @@
 package com.vinicius.lojinha.services;
 
+import java.time.LocalDate;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,8 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public Product saveProduct(Product product) {
 		System.out.println("Inserindo produto:" );
+		
+		product.setEntryStock(LocalDate.now());
 		return repository.save(product);
 	}
 
