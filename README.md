@@ -51,7 +51,6 @@ Inicie o projeto pela IDE e acesse <http://localhost:8080/api> no navegador.
 **Como Iniciar**   
 Execute `npm start` no cmd e acesse <http://localhost:4200> no navegador.
 
-## Considerações finais 🖖
+## Redes Sociais 🖖
 
-Marque Star neste projeto e se tiver interesse, acesse meus outros projetos aqui no Github.   
-Não se equeça também de dar uma passada no meu [Linkedin](http://www.linkedin.com/in/viniciuspadovam).
+[Linkedin](http://www.linkedin.com/in/viniciuspadovam)
