@@ -16,6 +16,7 @@ Operações do CRUD realizadas com a entidade `Products`.
     - Spring MVC (Tomcat)
     - Spring Security (CORS)
     - Maven
+    - Lombok
 
 ## Como Configurar o Projeto 🛠
 
