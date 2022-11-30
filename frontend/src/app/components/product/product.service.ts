@@ -40,7 +40,7 @@ export class ProductService {
   }
 
   delete(id: number): Observable<Product> {
-    const url = `${this.baseURL}/delete/${id}`;
+    const url = `${this.baseURL}/${id}`;
     return this.http.delete<Product>(url);
   }
 }
